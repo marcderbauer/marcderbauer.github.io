@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>work on Twenty Twenty Hugo</title>
+    <title>work on Marc-Anthony Bauer</title>
     <link>/tags/work/</link>
-    <description>Recent content in work on Twenty Twenty Hugo</description>
+    <description>Recent content in work on Marc-Anthony Bauer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 14 Mar 2020 15:40:24 +0600</lastBuildDate><atom:link href="/tags/work/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Works and Days</title>
+      <title>The Problem of Implicit Hatespeech in NLP</title>
       <link>/blog/post-1/</link>
       <pubDate>Sat, 14 Mar 2020 15:40:24 +0600</pubDate>
       

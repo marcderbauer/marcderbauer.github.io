@@ -1,45 +1,45 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Categories on Twenty Twenty Hugo</title>
+    <title>Categories on Marc-Anthony Bauer</title>
     <link>/categories/</link>
-    <description>Recent content in Categories on Twenty Twenty Hugo</description>
+    <description>Recent content in Categories on Marc-Anthony Bauer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 14 Mar 2020 15:40:24 +0600</lastBuildDate><atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>lifestyle</title>
-      <link>/categories/lifestyle/</link>
+      <title>Altruism</title>
+      <link>/categories/altruism/</link>
       <pubDate>Sat, 14 Mar 2020 15:40:24 +0600</pubDate>
       
-      <guid>/categories/lifestyle/</guid>
+      <guid>/categories/altruism/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>operations</title>
-      <link>/categories/operations/</link>
+      <title>Economics</title>
+      <link>/categories/economics/</link>
       <pubDate>Sat, 14 Mar 2020 15:40:24 +0600</pubDate>
       
-      <guid>/categories/operations/</guid>
+      <guid>/categories/economics/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>tour</title>
-      <link>/categories/tour/</link>
+      <title>hatespeech</title>
+      <link>/categories/hatespeech/</link>
       <pubDate>Sat, 14 Mar 2020 15:40:24 +0600</pubDate>
       
-      <guid>/categories/tour/</guid>
+      <guid>/categories/hatespeech/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Working days</title>
-      <link>/categories/working-days/</link>
+      <title>NLP</title>
+      <link>/categories/nlp/</link>
       <pubDate>Sat, 14 Mar 2020 15:40:24 +0600</pubDate>
       
-      <guid>/categories/working-days/</guid>
+      <guid>/categories/nlp/</guid>
       <description></description>
     </item>
     
