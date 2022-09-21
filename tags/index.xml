@@ -8,29 +8,47 @@
     <language>en-us</language>
     <lastBuildDate>Sat, 14 Mar 2020 15:40:24 +0600</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>day</title>
-      <link>/tags/day/</link>
+      <title>Economics</title>
+      <link>/tags/economics/</link>
       <pubDate>Sat, 14 Mar 2020 15:40:24 +0600</pubDate>
       
-      <guid>/tags/day/</guid>
+      <guid>/tags/economics/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>fashion</title>
-      <link>/tags/fashion/</link>
+      <title>Hate Speech</title>
+      <link>/tags/hate-speech/</link>
       <pubDate>Sat, 14 Mar 2020 15:40:24 +0600</pubDate>
       
-      <guid>/tags/fashion/</guid>
+      <guid>/tags/hate-speech/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>lifestyle</title>
-      <link>/tags/lifestyle/</link>
+      <title>Hugging Face</title>
+      <link>/tags/hugging-face/</link>
       <pubDate>Sat, 14 Mar 2020 15:40:24 +0600</pubDate>
       
-      <guid>/tags/lifestyle/</guid>
+      <guid>/tags/hugging-face/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Mental Health</title>
+      <link>/tags/mental-health/</link>
+      <pubDate>Sat, 14 Mar 2020 15:40:24 +0600</pubDate>
+      
+      <guid>/tags/mental-health/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Music</title>
+      <link>/tags/music/</link>
+      <pubDate>Sat, 14 Mar 2020 15:40:24 +0600</pubDate>
+      
+      <guid>/tags/music/</guid>
       <description></description>
     </item>
     
@@ -44,29 +62,11 @@
     </item>
     
     <item>
-      <title>Project</title>
-      <link>/tags/project/</link>
+      <title>Social Good</title>
+      <link>/tags/social-good/</link>
       <pubDate>Sat, 14 Mar 2020 15:40:24 +0600</pubDate>
       
-      <guid>/tags/project/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>PyTorch</title>
-      <link>/tags/pytorch/</link>
-      <pubDate>Sat, 14 Mar 2020 15:40:24 +0600</pubDate>
-      
-      <guid>/tags/pytorch/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>work</title>
-      <link>/tags/work/</link>
-      <pubDate>Sat, 14 Mar 2020 15:40:24 +0600</pubDate>
-      
-      <guid>/tags/work/</guid>
+      <guid>/tags/social-good/</guid>
       <description></description>
     </item>
     

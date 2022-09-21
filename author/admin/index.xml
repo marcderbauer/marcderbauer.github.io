@@ -17,12 +17,13 @@
     </item>
     
     <item>
-      <title>Generating Vice Headlines using Pytorch</title>
+      <title>Generating Vice Headlines using Bloom</title>
       <link>/blog/post-4/</link>
       <pubDate>Sat, 14 Mar 2020 15:40:24 +0600</pubDate>
       
       <guid>/blog/post-4/</guid>
-      <description>Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs.</description>
+      <description>Image Source
+Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs.</description>
     </item>
     
     <item>
@@ -31,7 +32,8 @@
       <pubDate>Sat, 14 Mar 2020 15:40:24 +0600</pubDate>
       
       <guid>/blog/post-1/</guid>
-      <description>Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs.</description>
+      <description>Photo by Kenny Eliason on Unsplash
+Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs.</description>
     </item>
     
     <item>

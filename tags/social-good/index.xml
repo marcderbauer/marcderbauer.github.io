@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Social Good on Marc-Anthony Bauer</title>
+    <link>/tags/social-good/</link>
+    <description>Recent content in Social Good on Marc-Anthony Bauer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 14 Mar 2020 15:40:24 +0600</lastBuildDate><atom:link href="/tags/social-good/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The Problem of Implicit Hatespeech in NLP</title>
+      <link>/blog/post-1/</link>
+      <pubDate>Sat, 14 Mar 2020 15:40:24 +0600</pubDate>
+      
+      <guid>/blog/post-1/</guid>
+      <description>Photo by Kenny Eliason on Unsplash
+Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs.</description>
+    </item>
+    
+    <item>
+      <title>Why Buying Fair Trade Coffee is Not an Effective Way of Doing Good</title>
+      <link>/blog/post-3/</link>
+      <pubDate>Sat, 14 Mar 2020 15:40:24 +0600</pubDate>
+      
+      <guid>/blog/post-3/</guid>
+      <description>Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs.</description>
+    </item>
+    
+  </channel>
+</rss>

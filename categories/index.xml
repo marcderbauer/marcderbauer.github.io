@@ -26,20 +26,20 @@
     </item>
     
     <item>
-      <title>hatespeech</title>
-      <link>/categories/hatespeech/</link>
-      <pubDate>Sat, 14 Mar 2020 15:40:24 +0600</pubDate>
-      
-      <guid>/categories/hatespeech/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>NLP</title>
       <link>/categories/nlp/</link>
       <pubDate>Sat, 14 Mar 2020 15:40:24 +0600</pubDate>
       
       <guid>/categories/nlp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Project</title>
+      <link>/categories/project/</link>
+      <pubDate>Sat, 14 Mar 2020 15:40:24 +0600</pubDate>
+      
+      <guid>/categories/project/</guid>
       <description></description>
     </item>
     
