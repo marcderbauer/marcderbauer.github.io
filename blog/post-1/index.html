@@ -3,13 +3,13 @@
 
 <head>
   <meta charset="utf-8">
-  <title>The Problem of Implicit Hatespeech in NLP</title>
+  <title>Generating Vice Headlines using Bloom</title>
 
   <!-- mobile responsive meta -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="This is meta description">
   <meta name="author" content="Marc-Anthony Bauer">
-  <meta name="generator" content="Hugo 0.102.0" />
+  <meta name="generator" content="Hugo 0.104.3" />
   
 
   <!-- Main Stylesheet -->
@@ -277,7 +277,7 @@
         </div>
         
       </div>
-      <h2 class="entry-title heading-size-1">The Problem of Implicit Hatespeech in NLP</h2>
+      <h2 class="entry-title heading-size-1">Generating Vice Headlines using Bloom</h2>
       <div class="post-meta-wrapper post-meta-single post-meta-single-top">
         <ul class="post-meta">
           
@@ -290,7 +290,7 @@
                   d="M4.60069444,4.09375 L3.25,4.09375 C2.47334957,4.09375 1.84375,4.72334957 1.84375,5.5 L1.84375,7.26736111 L16.15625,7.26736111 L16.15625,5.5 C16.15625,4.72334957 15.5266504,4.09375 14.75,4.09375 L13.3993056,4.09375 L13.3993056,4.55555556 C13.3993056,5.02154581 13.0215458,5.39930556 12.5555556,5.39930556 C12.0895653,5.39930556 11.7118056,5.02154581 11.7118056,4.55555556 L11.7118056,4.09375 L6.28819444,4.09375 L6.28819444,4.55555556 C6.28819444,5.02154581 5.9104347,5.39930556 5.44444444,5.39930556 C4.97845419,5.39930556 4.60069444,5.02154581 4.60069444,4.55555556 L4.60069444,4.09375 Z M6.28819444,2.40625 L11.7118056,2.40625 L11.7118056,1 C11.7118056,0.534009742 12.0895653,0.15625 12.5555556,0.15625 C13.0215458,0.15625 13.3993056,0.534009742 13.3993056,1 L13.3993056,2.40625 L14.75,2.40625 C16.4586309,2.40625 17.84375,3.79136906 17.84375,5.5 L17.84375,15.875 C17.84375,17.5836309 16.4586309,18.96875 14.75,18.96875 L3.25,18.96875 C1.54136906,18.96875 0.15625,17.5836309 0.15625,15.875 L0.15625,5.5 C0.15625,3.79136906 1.54136906,2.40625 3.25,2.40625 L4.60069444,2.40625 L4.60069444,1 C4.60069444,0.534009742 4.97845419,0.15625 5.44444444,0.15625 C5.9104347,0.15625 6.28819444,0.534009742 6.28819444,1 L6.28819444,2.40625 Z M1.84375,8.95486111 L1.84375,15.875 C1.84375,16.6516504 2.47334957,17.28125 3.25,17.28125 L14.75,17.28125 C15.5266504,17.28125 16.15625,16.6516504 16.15625,15.875 L16.15625,8.95486111 L1.84375,8.95486111 Z" />
               </svg> </span>
             <span class="meta-text">
-              March 14, 2020
+              October 14, 2022
             </span>
           </li>
           
@@ -301,20 +301,188 @@
   
   <figure class="featured-media">
     <div class="featured-media-inner section-inner medium">
-      <img width="1200" height="769" src="/images/angry_hacker.png"
-        class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="The Problem of Implicit Hatespeech in NLP"
+      <img width="1200" height="769" src="/images/Bloom.png"
+        class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="Generating Vice Headlines using Bloom"
         sizes="(max-width: 1200px) 100vw, 1200px">
     </div>
   </figure>
   
   <div class="post-inner thin ">
     <div class="entry-content">
-      <p>Photo by <a href="https://unsplash.com/@neonbrand?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Kenny Eliason</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></p>
-<h3>This Content Is Currently Unavailable :(</h3>
-<hr/>  
-<p>I am currently working on many things and haven&rsquo;t had the chance to finish this article yet. It will be online soon.
-If you want to receive a notification once it is available, please get in <a href="/contact"> contact </a>.</p>
-<p>You can also visit my <a href="https://github.com/marcderbauer">GitHub</a> profile to see my work in progress.</p>
+      <p><a href="https://www.technologyreview.com/2022/07/12/1055817/inside-a-radical-new-project-to-democratize-ai/">Image Source</a></p>
+<h2 id="motivation">Motivation</h2>
+<p><a title="Unknown authorUnknown author, Public domain, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Vice_Logo.svg"><img width="256" alt="Vice Logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Vice_Logo.svg/256px-Vice_Logo.svg.png" style="float: right;margin: 0 0 0 15px;"></a></p>
+<blockquote>
+<p><em>“What It’s Like To Sell Burgers In North Korea”</em></p>
+</blockquote>
+<p>About three years ago, this title sent me down yet another rabbit hole of obscure videos on VICE News. And how could it not? North Korean life is already quite opaque, but who knew they sold burgers there?</p>
+<p>Aside from the oddball videos, such as <em>“A Male Witch Explains Why He’s not a Wizard”</em> and <em>“I’m the Victim of a Far Right Conspiracy Theory”</em>, the channel features lots of reporting on conflict regions and events happening on the fringes of society. I started to wonder…, could a machine pick up on this? Would a language model be able not to learn, but replicate this subtle weirdness inherent to VICE YouTube Titles? I wanted to know, and already knew how to find out: fine-tuning BLOOM!</p>
+<h4 id="bloom">BLOOM</h4>
+<p>A few months ago, BigScience made waves in the open-source community by releasing their new large language model <a href="https://huggingface.co/docs/transformers/model_doc/bloom">BLOOM</a> to the public. It contrasted itself from most previous models by not making the number of parameters or dimensions its main selling point; it was its’ availability. One of BigScience&rsquo;s main competitors, OpenAI, hesitated to make their new model GPT3 publicly available. Only after months of exclusive commercial licensing to Microsoft was the average person able to access it. OpenAI cited their commitment to the safe deployment of AI as grounds for this decision, but critics labelled this a <a href="https://www.technologyreview.com/2020/09/23/1008729/openai-is-giving-microsoft-exclusive-access-to-its-gpt-3-language-model/">monetisation issue</a>. In contrast, BLOOM was open-sourced from the get-go, ready to use by anyone with enough technical savvy to run a <a href="https://huggingface.co/">Hugging Face</a> model.</p>
+<h2 id="how-to-build-it">How To Build It</h2>
+<h3 id="data">Data</h3>
+<blockquote>
+<p><a href="https://towardsdatascience.com/from-model-centric-to-data-centric-artificial-intelligence-77e423f3f593"><em>Data is at the heart of every ML endeavour.</em></a></p>
+</blockquote>
+<p>To my knowledge, there exists no readily available dataset of VICE video titles. We have to create one ourselves. This will be fairly easy, with YouTube providing a proprietary API to query data.</p>
+<h4 id="gathering-data">Gathering Data</h4>
+<p>There are a few setup steps that we need to complete before using the API. Roughly speaking, they are:</p>
+<ol>
+<li>Create a <a href="https://developers.google.com/">Google Developer Account</a></li>
+<li>Create a new project</li>
+<li>Enable the <a href="https://developers.google.com/youtube/v3">YouTube Data API v3</a></li>
+<li><a href="https://developers.google.com/youtube/registering_an_application">Create a credential</a></li>
+<li>Add the credential to your workspace</li>
+</ol>
+<p>There is an <a href="https://blog.hubspot.com/website/how-to-get-youtube-api-key">excellent Hubspot article</a> to guide you through the setup.</p>
+<p>Once you have the YouTube API working, we can use it to query the titles of all videos of a channel. There is a Python <a href="https://github.com/marcderbauer/bloom/blob/82c2cd11fb93477b08e4beff80474e682e16f570/youtube/query_api.py">script</a> included for this in this project’s GitHub repo.</p>
+<p>All the script needs is a YouTube playlist ID. We can find the playlist ID of an entire channel by going to the channel&rsquo;s page, clicking <code>PLAY ALL</code> and copying everything after <code>list=</code> in the link.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span>https://www.youtube.com/watch?v=Q6wBh7UcHqo&amp;list=n8zNIfYAQNdrFRrr8oibKw              # VICE
+</span></span><span style="display:flex;"><span>https://www.youtube.com/watch?v=cDppHAzyFew&amp;list=PLw613M86o5o7q1cjb26MfCgdxJtshvRZ-    # VICE News
+</span></span></code></pre></div><p>To maximise the amount of training data, it makes sense to include both the VICE and VICE News channels. They are topically similar, and for our intents identical.</p>
+<p>The <code>query_api.py</code> makes saving video titles easy. We just need to feed the playlist IDs to the script like this:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span>python3 youtube/query_api.py UUn8zNIfYAQNdrFRrr8oibKw PLw613M86o5o7q1cjb26MfCgdxJtshvRZ-
+</span></span></code></pre></div><p>It automatically downloads all video titles of a given playlist ID and concatenates them into one document named after the channel. Given multiple playlist IDs, it also creates a combined.txt containing all titles. This is the file we will use.</p>
+<h4 id="cleaning-data">Cleaning data</h4>
+<p>All the data we just queried is of a single type: YouTube Titles. They are already quite regular, but we can do better. Since we want to train a machine learning model, should aim for the highest data quality possible. We still have some more cleaning to do!</p>
+<p>On first inspection, there are three main issues:</p>
+<ol>
+<li>
+<p>Videos being in foreign languages i.e. non-English</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>Dibattito: la settimana lavorativa da <span style="color:#ae81ff">4</span> giorni <span style="color:#f92672">in</span> Italia è possibile<span style="color:#960050;background-color:#1e0010">?</span>
+</span></span></code></pre></div></li>
+<li>
+<p>Video series, creating multiple entries for essentially the same title</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>North Korean Labor Camps (Part <span style="color:#ae81ff">1</span> of <span style="color:#ae81ff">7</span>)
+</span></span><span style="display:flex;"><span>North Korean Labor Camps (Part <span style="color:#ae81ff">2</span> of <span style="color:#ae81ff">7</span>)
+</span></span><span style="display:flex;"><span>North Korean Labor Camps (Part <span style="color:#ae81ff">3</span> of <span style="color:#ae81ff">7</span>)
+</span></span><span style="display:flex;"><span><span style="color:#f92672">...</span>
+</span></span></code></pre></div></li>
+<li>
+<p>Tags attached to categorise the videos</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>ANTHONY PAPPALARDO PART <span style="color:#ae81ff">1</span> of <span style="color:#ae81ff">2</span> <span style="color:#f92672">|</span> EPICLY LATER<span style="color:#e6db74">&#39;D | VICE</span>
+</span></span><span style="display:flex;"><span>VICE Guide to Karachi <span style="color:#66d9ef">with</span> Suroosh Alvi : Riding <span style="color:#66d9ef">with</span> a Killer (Part <span style="color:#ae81ff">5</span><span style="color:#f92672">/</span><span style="color:#ae81ff">5</span>)
+</span></span></code></pre></div></li>
+</ol>
+<p>The first two issues are easy to fix programmatically. Using the <a href="https://pypi.org/project/langdetect/">langdetect</a> library, We can filter out foreign-language videos from the list as such</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> langdetect <span style="color:#f92672">import</span> detec
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">filter_language</span>(lines, language<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;en&#34;</span>):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> list(filter(<span style="color:#66d9ef">lambda</span> x: detect(x) <span style="color:#f92672">==</span> language, lines))
+</span></span></code></pre></div><p>To filter similar video titles, we use the <a href="https://en.wikipedia.org/wiki/Levenshtein_distance">Levenshtein distance</a>. It’s a simple similarity measure to capture the difference in characters between two inputs. Using our example from above we notice that only one character is different. The Levenshtein distance for this pair is therefore on</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>North Korean Labor Camps (Part 1 of 7)
+</span></span><span style="display:flex;"><span>North Korean Labor Camps (Part 2 of 7)
+</span></span></code></pre></div><p>In Python, we use of the <a href="https://pypi.org/project/python-Levenshtein/">Levenshtein library</a>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> Levenshtein <span style="color:#f92672">import</span> distance
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">filter_similar</span>(lines, max_distance<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span>):
+</span></span><span style="display:flex;"><span>    seen_lines <span style="color:#f92672">=</span> []
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> line <span style="color:#f92672">in</span> lines:
+</span></span><span style="display:flex;"><span>        seen <span style="color:#f92672">=</span> <span style="color:#66d9ef">False</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> seen_line <span style="color:#f92672">in</span> seen_lines:
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> distance(line, seen_line) <span style="color:#f92672">&lt;=</span> max_distance:
+</span></span><span style="display:flex;"><span>                seen <span style="color:#f92672">=</span> <span style="color:#66d9ef">True</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">break</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> seen:
+</span></span><span style="display:flex;"><span>            seen_lines<span style="color:#f92672">.</span>append(line)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> seen_lines
+</span></span></code></pre></div><p>The two filters remove 1138 of the 7801 original titles, leaving us with a training set of 6663 examples.</p>
+<h5 id="manual-corrections">Manual Corrections:</h5>
+<p>In the previous steps, we filtered out unwanted lines, but have yet to touch any of the contents within the lines.</p>
+<p>Many titles have tags to associate videos with ongoing series. The tags are hard to remove programmatically and vary on a channel-by-channel basis. Furthermore they often don’t follow strict patterns. Some are separated by a pipe “|”, some by a dash “-”, or even by being surrounded by brackets ”(…)”. To add onto the complexity, tags aren’t always suffixes. Some tags are prefixes. This means that you can’t just remove everything occurring after some marker, since it may erase the main content.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span># Suffix
+</span></span><span style="display:flex;"><span>Did This YouTuber Actually Crash A Plane for Views? | My Life Online
+</span></span><span style="display:flex;"><span>Documenting America&#39;s Underbelly - ALL GAS NO BRAKES
+</span></span><span style="display:flex;"><span>How to Eat Like a Northerner (MUNCHIES GUIDE To...Full Episode)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># Prefix
+</span></span><span style="display:flex;"><span>The Opioid Effect: Maine&#39;s Fishing Community Battles with Heroin
+</span></span><span style="display:flex;"><span>The Opioid Effect: An Ohio Family Rebuilds After Addiction
+</span></span></code></pre></div><p>These tags require judgement calls on a case-to-case basis. They need to be manually cleaned using RegEx. It’s important to note that the tags can be essential to the structure of the title. We, therefore, do not want to remove all of them! Ideally, we want to delete just enough to simplify training and prevent overfitting. We also need to emphasise removing suffixes, as they reduce the output space and may indirectly serve as premature <code>&lt;EOS&gt;</code> tokens.</p>
+<h3 id="bloom-1">BLOOM</h3>
+<h4 id="training">Training</h4>
+<p>Using BLOOM&rsquo;s 176 Billion parameter base model would be a dream come true. Unfortunately, training the model locally limits the resources available (and training the model using a cloud service is out of scope for this project!). We thus need to restrict ourselves to the 560 Million parameter version &ndash; more than enough for a fun project!</p>
+<p>The first step on the model side is tokenisation. BigScience provides a pre-trained <code>Tokenizer</code>, which should provide optimal results for BLOOM.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># Load pretrained tokeniser</span>
+</span></span><span style="display:flex;"><span>tokenizer <span style="color:#f92672">=</span> BloomTokenizerFast<span style="color:#f92672">.</span>from_pretrained(<span style="color:#e6db74">&#34;bigscience/bloom-560m&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Define tokenise function</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">tokenize_function</span>(examples):
+</span></span><span style="display:flex;"><span>    examples[<span style="color:#e6db74">&#34;text&#34;</span>] <span style="color:#f92672">=</span> [example <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; &lt;/s&gt;&#34;</span> <span style="color:#66d9ef">for</span> example <span style="color:#f92672">in</span> examples[<span style="color:#e6db74">&#34;text&#34;</span>]] <span style="color:#75715e"># Append EOS</span>
+</span></span><span style="display:flex;"><span>    tokenized <span style="color:#f92672">=</span> tokenizer(examples[<span style="color:#e6db74">&#34;text&#34;</span>], padding<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>, pad_to_multiple_of<span style="color:#f92672">=</span><span style="color:#ae81ff">8</span>)
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">return</span> tokenized
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># map function onto dataset in batches</span>
+</span></span><span style="display:flex;"><span>tokenized <span style="color:#f92672">=</span> dataset<span style="color:#f92672">.</span>map(tokenize_function, batched<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>, num_proc<span style="color:#f92672">=</span><span style="color:#ae81ff">4</span>, remove_columns<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#34;text&#34;</span>])
+</span></span></code></pre></div><p>In the <code>tokenize_function</code> we append a <code>&lt;EOS&gt;</code> tag, so the model will learn when to stop generating. All the tokenised examples are also padded to a multiple of 8, in this case to a length of 32. This allows for batching; training the model significantly faster with only a slight trade-off in results.</p>
+<p>As all our padded examples are of length 32, we set a block size of 128, setting 4 parallel workers to process our examples at the same time.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">group_texts</span>(examples):
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Concatenate all texts.</span>
+</span></span><span style="display:flex;"><span>    concatenated_examples <span style="color:#f92672">=</span> {k: sum(examples[k], []) <span style="color:#66d9ef">for</span> k <span style="color:#f92672">in</span> examples<span style="color:#f92672">.</span>keys()}
+</span></span><span style="display:flex;"><span>    total_length <span style="color:#f92672">=</span> len(concatenated_examples[list(examples<span style="color:#f92672">.</span>keys())[<span style="color:#ae81ff">0</span>]])
+</span></span><span style="display:flex;"><span>    total_length <span style="color:#f92672">=</span> (total_length <span style="color:#f92672">//</span> block_size) <span style="color:#f92672">*</span> block_size
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Split by chunks of max_len.</span>
+</span></span><span style="display:flex;"><span>    result <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>        k: [t[i : i <span style="color:#f92672">+</span> block_size] <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">0</span>, total_length, block_size)]
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> k, t <span style="color:#f92672">in</span> concatenated_examples<span style="color:#f92672">.</span>items()
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    result[<span style="color:#e6db74">&#34;labels&#34;</span>] <span style="color:#f92672">=</span> result[<span style="color:#e6db74">&#34;input_ids&#34;</span>]<span style="color:#f92672">.</span>copy()
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> result
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>lm_datasets <span style="color:#f92672">=</span> tokenized<span style="color:#f92672">.</span>map(group_texts, batched<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>, batch_size<span style="color:#f92672">=</span><span style="color:#ae81ff">1000</span>, num_proc<span style="color:#f92672">=</span><span style="color:#ae81ff">4</span>,
+</span></span><span style="display:flex;"><span>)
+</span></span></code></pre></div><p>Now that the data is fully tokenised and batched, we can start the fine-tuning.</p>
+<p>Fine-tuning is a technique of <em>transfer learning</em>, adjusting a model trained on one task to function on another. As the name suggests, it <em>transfers</em> the knowledge of a Large Language Model, such as BLOOM, onto a highly specialised task, such as generating YouTube Titles.</p>
+<p>Hugging Face provides a Trainer class, which only needs the model, the dataset and the desired hyperparameters for fine-tuning. This makes the process fairly straightforward.</p>
+<p>Our task is to fine-tune the model, not to train it from scratch. We thus opt for a small <code>learning_rate</code> of 0.00002. To prevent overfitting we add regularisation with <code>weight_decay=0.01</code>. The 10 epochs are somewhat arbitrary, as we logged the training in Weights and Biases and can just choose the best epoch according to the train and evaluation loss.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># Import the model</span>
+</span></span><span style="display:flex;"><span>model <span style="color:#f92672">=</span> BloomForCausalLM<span style="color:#f92672">.</span>from_pretrained(bloom<span style="color:#f92672">-</span><span style="color:#ae81ff">560</span>m)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Define Hyperparameters</span>
+</span></span><span style="display:flex;"><span>training_args <span style="color:#f92672">=</span> TrainingArguments(
+</span></span><span style="display:flex;"><span>    evaluation_strategy <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;epoch&#34;</span>,
+</span></span><span style="display:flex;"><span>    learning_rate<span style="color:#f92672">=</span><span style="color:#ae81ff">2e-5</span>,
+</span></span><span style="display:flex;"><span>    weight_decay<span style="color:#f92672">=</span><span style="color:#ae81ff">0.01</span>,
+</span></span><span style="display:flex;"><span>    num_train_epochs<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Instantiate trainer</span>
+</span></span><span style="display:flex;"><span>trainer <span style="color:#f92672">=</span> Trainer(
+</span></span><span style="display:flex;"><span>    model<span style="color:#f92672">=</span>model,
+</span></span><span style="display:flex;"><span>    args<span style="color:#f92672">=</span>training_args,
+</span></span><span style="display:flex;"><span>    train_dataset<span style="color:#f92672">=</span>lm_datasets[<span style="color:#e6db74">&#34;train&#34;</span>],
+</span></span><span style="display:flex;"><span>    eval_dataset<span style="color:#f92672">=</span>lm_datasets[<span style="color:#e6db74">&#34;test&#34;</span>]
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Start the training</span>
+</span></span><span style="display:flex;"><span>trainer<span style="color:#f92672">.</span>train()
+</span></span></code></pre></div><h4 id="inference">Inference</h4>
+<p>The final (and most fun) part is inference. There are <a href="https://huggingface.co/blog/how-to-generate">many different inference strategies</a> we could use! The current state-of-the-art is sampling-based, so we will choose this one. It is also non-deterministic, which makes it a great choice if you don’t want your model to repeatedly generate the same sentence.</p>
+<p>We can pass different parameters to the <code>model.generate</code> function to finely adjust inference. There are too many parameters to elaborate upon, so I will leave you with this amazing <a href="https://huggingface.co/blog/how-to-generate">Hugging Face article</a> and the <a href="https://huggingface.co/transformers/v2.9.1/main_classes/model.html#transformers.PreTrainedModel.generate">official documentation</a>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>max_length<span style="color:#f92672">=</span><span style="color:#ae81ff">30</span>, 
+</span></span><span style="display:flex;"><span>min_length<span style="color:#f92672">=</span>len(input)<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>,
+</span></span><span style="display:flex;"><span>top_p<span style="color:#f92672">=</span><span style="color:#ae81ff">0.92</span>, 
+</span></span><span style="display:flex;"><span>top_k<span style="color:#f92672">=</span><span style="color:#ae81ff">50</span>,
+</span></span><span style="display:flex;"><span>temperature<span style="color:#f92672">=</span><span style="color:#ae81ff">0.7</span>,
+</span></span><span style="display:flex;"><span>repetition_penalty<span style="color:#f92672">=</span><span style="color:#ae81ff">1.2</span>
+</span></span></code></pre></div><h5 id="titlecase">Titlecase</h5>
+<p>Our final result should be a title. This means, it should follow a specific capitalisation pattern: all words start in uppercase, save for a select few function words. The <code>titlecase</code> library capitalises strings according to this pattern, so all we need to do is pass the results from the <code>model.generate</code> function to <code>titlecase</code>.</p>
+<p>Here’s some examples our model generated:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>Inside the Secret Helpline for People Living with Mental Health
+</span></span><span style="display:flex;"><span>North Korean Conspiracy Theorist Takes Me on a Virtual Tour of London
+</span></span><span style="display:flex;"><span>Why Do So Many People Think Donald Trump Is the Answer to Social Security?
+</span></span></code></pre></div><h3 id="summary">Summary</h3>
+<p>Fine-tuning BLOOM is a fun exercise in applied machine learning. I am a big fan of building entire projects from start to finish; ending up with a fully functioning model is therefore extremely satisfying. Aside from being a good exercise in data sourcing/cleaning and engineering, it teaches many best practices in machine learning.</p>
+<p>A firm believer in open-source software, I wanted to make this model as easily accessible as possible. The code for this project is available on my GitHub repository, with full documentation. You can download the model from the Huggingface Hub and try it out online with a Gradio demo hosted on Huggingface Spaces.</p>
+<p>If you have any thoughts, suggestions or improvements, I would be happy to hear from you!</p>
+<td nowrap><>  
+<p><a href="https://github.com/marcderbauer"><img src="https://img.shields.io/badge/-Github-000?style=flat&amp;logo=Github&amp;logoColor=white" alt="GitHub"></a>
+<a href="https://huggingface.co/marcderbauer/vice-headlines"><img src="https://img.shields.io/badge/-Model-yellow?style=flat" alt="Model"></a>
+<a href="https://huggingface.co/spaces/marcderbauer/vice-headlines"><img src="https://img.shields.io/badge/-Demo-green?style=flat" alt="Demo"></a>
+<a href="mailto:hello@marcanthonybauer.com?subject=%5BBLOOM%5D%20"><img src="https://img.shields.io/badge/-Email-c14438?style=flat&amp;logo=Gmail&amp;logoColor=white" alt="Gmail"></a></p>
+</td>
 
     </div>
   </div>
@@ -332,9 +500,9 @@ If you want to receive a notification once it is available, please get in <a hre
               </path>
             </svg> </span>
           <span class="meta-text">
-            <a href="/tags/hate-speech" rel="tag">Hate speech</a>
+            <a href="/tags/nlp" rel="tag">Nlp</a>
             ,
-            <a href="/tags/social-good" rel="tag">Social good</a>
+            <a href="/tags/hugging-face" rel="tag">Hugging face</a>
              </span>
         </li>
       </ul>
