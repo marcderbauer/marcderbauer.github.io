@@ -349,14 +349,14 @@
 <ol>
 <li>
 <p>Videos being in foreign languages i.e. non-English</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>Dibattito: la settimana lavorativa da <span style="color:#ae81ff">4</span> giorni <span style="color:#f92672">in</span> Italia è possibile<span style="color:#960050;background-color:#1e0010">?</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>Dibattito: la settimana lavorativa da 4 giorni in Italia è possibile?
 </span></span></code></pre></div></li>
 <li>
 <p>Video series, creating multiple entries for essentially the same title</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>North Korean Labor Camps (Part <span style="color:#ae81ff">1</span> of <span style="color:#ae81ff">7</span>)
-</span></span><span style="display:flex;"><span>North Korean Labor Camps (Part <span style="color:#ae81ff">2</span> of <span style="color:#ae81ff">7</span>)
-</span></span><span style="display:flex;"><span>North Korean Labor Camps (Part <span style="color:#ae81ff">3</span> of <span style="color:#ae81ff">7</span>)
-</span></span><span style="display:flex;"><span><span style="color:#f92672">...</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>North Korean Labor Camps (Part 1 of 7)
+</span></span><span style="display:flex;"><span>North Korean Labor Camps (Part 2 of 7)
+</span></span><span style="display:flex;"><span>North Korean Labor Camps (Part 3 of 7)
+</span></span><span style="display:flex;"><span>...
 </span></span></code></pre></div></li>
 <li>
 <p>Tags attached to categorise the videos</p>
@@ -435,7 +435,7 @@
 </span></span><span style="display:flex;"><span>)
 </span></span></code></pre></div><p>Now that the data is fully tokenised and batched, we can start the fine-tuning.</p>
 <p>Fine-tuning is a technique of <em>transfer learning</em>, adjusting a model trained on one task to function on another. As the name suggests, it <em>transfers</em> the knowledge of a Large Language Model, such as BLOOM, onto a highly specialised task, such as generating YouTube Titles.</p>
-<p>Hugging Face provides a Trainer class, which only needs the model, the dataset and the desired hyperparameters for fine-tuning. This makes the process fairly straightforward.</p>
+<p>Hugging Face provides a <code>Trainer</code> class, which only needs the model, the dataset and the desired hyperparameters for fine-tuning. This makes the process fairly straightforward.</p>
 <p>Our task is to fine-tune the model, not to train it from scratch. We thus opt for a small <code>learning_rate</code> of 0.00002. To prevent overfitting we add regularisation with <code>weight_decay=0.01</code>. The 10 epochs are somewhat arbitrary, as we logged the training in Weights and Biases and can just choose the best epoch according to the train and evaluation loss.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># Import the model</span>
 </span></span><span style="display:flex;"><span>model <span style="color:#f92672">=</span> BloomForCausalLM<span style="color:#f92672">.</span>from_pretrained(bloom<span style="color:#f92672">-</span><span style="color:#ae81ff">560</span>m)
