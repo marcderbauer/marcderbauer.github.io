@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-us">
+
+<head>
+  <meta charset="utf-8">
+  <title>Generating Vice Headlines using Bloom</title>
+
+  <!-- mobile responsive meta -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="This is meta description">
+  <meta name="author" content="Marc-Anthony Bauer">
+  <meta name="generator" content="Hugo 0.104.3" />
+  
+
+  <!-- Main Stylesheet -->
+  
+  <link rel="stylesheet" href="/css/wp-library.min.css" media="screen">
+
+  
+  <link rel="stylesheet" href="/css/style.min.css" media="screen">
+
+  
+  <link rel="stylesheet" href="/css/custom-style.min.css" media="screen">
+
+  <!--Favicon-->
+  <link rel="shortcut icon" href="/images/wave.png" type="image/x-icon">
+  <link rel="icon" href="/images/wave.png" type="image/x-icon">
+
+  <script>
+		document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+  </script>
+
+  
+  
+</head>
+
+<body class="home page-template-default page wp-embed-responsive singular enable-search-modal has-post-thumbnail has-no-pagination not-showing-comments show-avatars footer-top-visible">
+	<header id="site-header" class="header-footer-group" role="banner">
+  <div class="header-inner section-inner">
+    <div class="header-titles-wrapper">
+      <button class="toggle search-toggle mobile-search-toggle" data-toggle-target=".search-modal"
+        data-toggle-body-class="showing-search-modal" data-set-focus=".search-modal .search-field"
+        aria-expanded="false">
+        <span class="toggle-inner">
+          <span class="toggle-icon">
+            <svg class="svg-icon" aria-hidden="true" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg"
+              width="23" height="23" viewbox="0 0 23 23">
+              <path
+                d="M38.710696,48.0601792 L43,52.3494831 L41.3494831,54 L37.0601792,49.710696 C35.2632422,51.1481185 32.9839107,52.0076499 30.5038249,52.0076499 C24.7027226,52.0076499 20,47.3049272 20,41.5038249 C20,35.7027226 24.7027226,31 30.5038249,31 C36.3049272,31 41.0076499,35.7027226 41.0076499,41.5038249 C41.0076499,43.9839107 40.1481185,46.2632422 38.710696,48.0601792 Z M36.3875844,47.1716785 C37.8030221,45.7026647 38.6734666,43.7048964 38.6734666,41.5038249 C38.6734666,36.9918565 35.0157934,33.3341833 30.5038249,33.3341833 C25.9918565,33.3341833 22.3341833,36.9918565 22.3341833,41.5038249 C22.3341833,46.0157934 25.9918565,49.6734666 30.5038249,49.6734666 C32.7048964,49.6734666 34.7026647,48.8030221 36.1716785,47.3875844 C36.2023931,47.347638 36.2360451,47.3092237 36.2726343,47.2726343 C36.3092237,47.2360451 36.347638,47.2023931 36.3875844,47.1716785 Z"
+                transform="translate(-20 -31)" /></svg> </span>
+          <span class="toggle-text">Search</span>
+        </span>
+      </button>
+      <div class="header-titles">
+        <div class="site-title faux-heading"><a href="/">Marc-Anthony Bauer</a></div>
+      </div>
+
+      <button class="toggle nav-toggle mobile-nav-toggle" data-toggle-target=".menu-modal"
+        data-toggle-body-class="showing-menu-modal" aria-expanded="false" data-set-focus=".close-nav-toggle">
+        <span class="toggle-inner">
+          <span class="toggle-icon">
+            <svg class="svg-icon" aria-hidden="true" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg"
+              width="26" height="7" viewbox="0 0 26 7">
+              <path fill-rule="evenodd"
+                d="M332.5,45 C330.567003,45 329,43.4329966 329,41.5 C329,39.5670034 330.567003,38 332.5,38 C334.432997,38 336,39.5670034 336,41.5 C336,43.4329966 334.432997,45 332.5,45 Z M342,45 C340.067003,45 338.5,43.4329966 338.5,41.5 C338.5,39.5670034 340.067003,38 342,38 C343.932997,38 345.5,39.5670034 345.5,41.5 C345.5,43.4329966 343.932997,45 342,45 Z M351.5,45 C349.567003,45 348,43.4329966 348,41.5 C348,39.5670034 349.567003,38 351.5,38 C353.432997,38 355,39.5670034 355,41.5 C355,43.4329966 353.432997,45 351.5,45 Z"
+                transform="translate(-329 -38)" /></svg> </span>
+          <span class="toggle-text">Menu</span>
+        </span>
+      </button>
+
+    </div>
+
+    <div class="header-navigation-wrapper">
+      <nav class="primary-menu-wrapper" aria-label="Horizontal" role="navigation">
+        <ul class="primary-menu reset-list-style">
+          
+          <li class="menu-item"><a href="/contact/" aria-current="page">Contact</a></li>
+          
+        </ul>
+      </nav>
+
+      <div class="header-toggles hide-no-js">
+        <div class="toggle-wrapper nav-toggle-wrapper has-expanded-menu">
+          <button class="toggle nav-toggle desktop-nav-toggle" data-toggle-target=".menu-modal"
+            data-toggle-body-class="showing-menu-modal" aria-expanded="false" data-set-focus=".close-nav-toggle">
+            <span class="toggle-inner">
+              <span class="toggle-text">Menu</span>
+              <span class="toggle-icon">
+                <svg class="svg-icon" aria-hidden="true" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg"
+                  width="26" height="7" viewbox="0 0 26 7">
+                  <path fill-rule="evenodd"
+                    d="M332.5,45 C330.567003,45 329,43.4329966 329,41.5 C329,39.5670034 330.567003,38 332.5,38 C334.432997,38 336,39.5670034 336,41.5 C336,43.4329966 334.432997,45 332.5,45 Z M342,45 C340.067003,45 338.5,43.4329966 338.5,41.5 C338.5,39.5670034 340.067003,38 342,38 C343.932997,38 345.5,39.5670034 345.5,41.5 C345.5,43.4329966 343.932997,45 342,45 Z M351.5,45 C349.567003,45 348,43.4329966 348,41.5 C348,39.5670034 349.567003,38 351.5,38 C353.432997,38 355,39.5670034 355,41.5 C355,43.4329966 353.432997,45 351.5,45 Z"
+                    transform="translate(-329 -38)" /></svg> </span>
+            </span>
+          </button>
+        </div>
+
+        <div class="toggle-wrapper search-toggle-wrapper">
+          <button class="toggle search-toggle desktop-search-toggle" data-toggle-target=".search-modal"
+            data-toggle-body-class="showing-search-modal" data-set-focus=".search-modal .search-field"
+            aria-expanded="false">
+            <span class="toggle-inner">
+              <svg class="svg-icon" aria-hidden="true" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg"
+                width="23" height="23" viewbox="0 0 23 23">
+                <path
+                  d="M38.710696,48.0601792 L43,52.3494831 L41.3494831,54 L37.0601792,49.710696 C35.2632422,51.1481185 32.9839107,52.0076499 30.5038249,52.0076499 C24.7027226,52.0076499 20,47.3049272 20,41.5038249 C20,35.7027226 24.7027226,31 30.5038249,31 C36.3049272,31 41.0076499,35.7027226 41.0076499,41.5038249 C41.0076499,43.9839107 40.1481185,46.2632422 38.710696,48.0601792 Z M36.3875844,47.1716785 C37.8030221,45.7026647 38.6734666,43.7048964 38.6734666,41.5038249 C38.6734666,36.9918565 35.0157934,33.3341833 30.5038249,33.3341833 C25.9918565,33.3341833 22.3341833,36.9918565 22.3341833,41.5038249 C22.3341833,46.0157934 25.9918565,49.6734666 30.5038249,49.6734666 C32.7048964,49.6734666 34.7026647,48.8030221 36.1716785,47.3875844 C36.2023931,47.347638 36.2360451,47.3092237 36.2726343,47.2726343 C36.3092237,47.2360451 36.347638,47.2023931 36.3875844,47.1716785 Z"
+                  transform="translate(-20 -31)" /></svg> <span class="toggle-text">Search</span>
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="search-modal cover-modal header-footer-group" data-modal-target-string=".search-modal">
+    <div class="search-modal-inner modal-inner">
+      <div class="section-inner">
+        <form role="search" class="search-form" action="/search">
+          <label for="search-form-1">
+            <span class="screen-reader-text">Search for:</span>
+            <input id="search-query" type="search" class="search-field" placeholder="Search &hellip;"
+              name="s"/>
+          </label>
+          <input type="submit" class="search-submit" value="Search" />
+        </form>
+
+        <button class="toggle search-untoggle close-search-toggle fill-children-current-color"
+          data-toggle-target=".search-modal" data-toggle-body-class="showing-search-modal"
+          data-set-focus=".search-modal .search-field" aria-expanded="false">
+          <span class="screen-reader-text">Close search</span>
+          <svg class="svg-icon" aria-hidden="true" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg"
+            width="16" height="16" viewbox="0 0 16 16">
+            <polygon fill="" fill-rule="evenodd"
+              points="6.852 7.649 .399 1.195 1.445 .149 7.899 6.602 14.352 .149 15.399 1.195 8.945 7.649 15.399 14.102 14.352 15.149 7.899 8.695 1.445 15.149 .399 14.102" />
+          </svg> </button>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+<div class="menu-modal cover-modal header-footer-group" data-modal-target-string=".menu-modal">
+  <div class="menu-modal-inner modal-inner">
+    <div class="menu-wrapper section-inner">
+      <div class="menu-top">
+        <button class="toggle close-nav-toggle fill-children-current-color" data-toggle-target=".menu-modal"
+          data-toggle-body-class="showing-menu-modal" aria-expanded="false" data-set-focus=".menu-modal">
+          <span class="toggle-text">Close Menu</span>
+          <svg class="svg-icon" aria-hidden="true" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg"
+            width="16" height="16" viewbox="0 0 16 16">
+            <polygon fill="" fill-rule="evenodd"
+              points="6.852 7.649 .399 1.195 1.445 .149 7.899 6.602 14.352 .149 15.399 1.195 8.945 7.649 15.399 14.102 14.352 15.149 7.899 8.695 1.445 15.149 .399 14.102" />
+          </svg> </button>
+        <nav class="expanded-menu" aria-label="Expanded" role="navigation">
+          <ul class="modal-menu reset-list-style">
+            
+            <li class="menu-item menu-item-type-custom menu-item-object-custom">
+              <div class="ancestor-wrapper"><a href="/" aria-current="page">Home</a></div>
+            </li>
+            
+            <li class="menu-item menu-item-type-custom menu-item-object-custom">
+              <div class="ancestor-wrapper"><a href="/about/" aria-current="page">About</a></div>
+            </li>
+            
+            <li class="menu-item menu-item-type-custom menu-item-object-custom">
+              <div class="ancestor-wrapper"><a href="/blog/" aria-current="page">Blog</a></div>
+            </li>
+            
+            <li class="menu-item menu-item-type-custom menu-item-object-custom">
+              <div class="ancestor-wrapper"><a href="/contact/" aria-current="page">Contact</a></div>
+            </li>
+            
+            <li class="menu-item menu-item-type-custom menu-item-object-custom">
+              <div class="ancestor-wrapper"><a href="/interesting/" aria-current="page">Interesting Things</a></div>
+            </li>
+            
+          </ul>
+        </nav>
+        <nav class="mobile-menu" aria-label="Mobile" role="navigation">
+          <ul class="modal-menu reset-list-style">
+            
+            <li class="menu-item menu-item-type-custom menu-item-object-custom">
+              <div class="ancestor-wrapper"><a href="/" aria-current="page">Home</a></div>
+            </li>
+            
+            <li class="menu-item menu-item-type-custom menu-item-object-custom">
+              <div class="ancestor-wrapper"><a href="/about/" aria-current="page">About</a></div>
+            </li>
+            
+            <li class="menu-item menu-item-type-custom menu-item-object-custom">
+              <div class="ancestor-wrapper"><a href="/blog/" aria-current="page">Blog</a></div>
+            </li>
+            
+            <li class="menu-item menu-item-type-custom menu-item-object-custom">
+              <div class="ancestor-wrapper"><a href="/contact/" aria-current="page">Contact</a></div>
+            </li>
+            
+            <li class="menu-item menu-item-type-custom menu-item-object-custom">
+              <div class="ancestor-wrapper"><a href="/interesting/" aria-current="page">Interesting Things</a></div>
+            </li>
+            
+          </ul>
+        </nav>
+      </div>
+      <div class="menu-bottom">
+        <nav aria-label="Expanded Social links" role="navigation">
+          
+
+<ul class="social-menu reset-list-style social-icons fill-children-current-color">
+  
+
+  
+  <li id="menu-item-38" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-38"><a
+      href="https://github.com/marcderbauer" target="_blank"><span class="screen-reader-text">GitHub</span><svg class="svg-icon" aria-hidden="true"
+        role="img" focusable="false" width="24" height="24" viewbox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+        <path 
+          d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+        </path>
+      </svg></a></li>
+  
+
+  
+
+  
+
+  
+  <li id="menu-item-41" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-41"><a
+      href="mailto:hello@marcanthonybauer.com"><span class="screen-reader-text">Email</span><svg class="svg-icon" aria-hidden="true"
+        role="img" focusable="false" width="24" height="24" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M20,4H4C2.895,4,2,4.895,2,6v12c0,1.105,0.895,2,2,2h16c1.105,0,2-0.895,2-2V6C22,4.895,21.105,4,20,4z M20,8.236l-8,4.882 L4,8.236V6h16V8.236z">
+        </path>
+      </svg></a></li>
+  
+
+  
+  <li id="menu-item-42" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-42"><a
+      href="https://www.linkedin.com/in/marcanthonybauer" target="_blank"><span class="screen-reader-text">LinkedIn</span><svg class="svg-icon" aria-hidden="true"
+        role="img" focusable="false" width="24" height="24" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M19,19H16V13.7A1.5,1.5 0 0,0 14.5,12.2A1.5,1.5 0 0,0 13,13.7V19H10V10H13V11.2C13.5,10.36 14.59,9.8 15.5,9.8A3.5,3.5 0 0,1 19,13.3M6.5,8.31C5.5,8.31 4.69,7.5 4.69,6.5A1.81,1.81 0 0,1 6.5,4.69C7.5,4.69 8.31,5.5 8.31,6.5A1.81,1.81 0 0,1 6.5,8.31M8,19H5V10H8M20,2H4C2.89,2 2,2.89 2,4V20A2,2 0 0,0 4,22H20A2,2 0 0,0 22,20V4C22,2.89 21.1,2 20,2Z">
+        </path>
+      </svg></a></li>
+  
+
+  
+  <li id="menu-item-37" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-43"><a
+      href="https://raw.githubusercontent.com/marcderbauer/marcderbauer/main/CV_Marc_Anthony_Bauer.pdf" target="_blank"><span class="screen-reader-text">CV</span><svg class="svg-icon" aria-hidden="true"
+        role="img" focusable="false" width="20" height="20" viewbox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2zM9.5 3A1.5 1.5 0 0 0 11 4.5h2v9.255S12 12 8 12s-5 1.755-5 1.755V2a1 1 0 0 1 1-1h5.5v2z">   
+        </path>
+      </svg></a></li>
+  
+</ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>
+
+	<main id="site-content" role="main">
+		
+
+<article
+  class="post type-post status-publish format-standard has-post-thumbnail hentry category-art category-editing tag-block tag-editor tag-gutenberg tag-wordpress">
+  <header class="entry-header has-text-align-center">
+    <div class="entry-header-inner section-inner medium">
+      <div class="entry-categories">
+        <span class="screen-reader-text">Categories</span>
+        <div class="entry-categories-inner">
+          
+          <a href="/categories/nlp" rel="category tag">Nlp</a>
+          
+          <a href="/categories/project" rel="category tag">Project</a>
+          
+        </div>
+        
+      </div>
+      <h2 class="entry-title heading-size-1">Generating Vice Headlines using Bloom</h2>
+      <div class="post-meta-wrapper post-meta-single post-meta-single-top">
+        <ul class="post-meta">
+          
+          <li class="post-date meta-wrapper">
+            <span class="meta-icon">
+              <span class="screen-reader-text">Post date</span>
+              <svg class="svg-icon" aria-hidden="true" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg"
+                width="18" height="19" viewbox="0 0 18 19">
+                <path fill=""
+                  d="M4.60069444,4.09375 L3.25,4.09375 C2.47334957,4.09375 1.84375,4.72334957 1.84375,5.5 L1.84375,7.26736111 L16.15625,7.26736111 L16.15625,5.5 C16.15625,4.72334957 15.5266504,4.09375 14.75,4.09375 L13.3993056,4.09375 L13.3993056,4.55555556 C13.3993056,5.02154581 13.0215458,5.39930556 12.5555556,5.39930556 C12.0895653,5.39930556 11.7118056,5.02154581 11.7118056,4.55555556 L11.7118056,4.09375 L6.28819444,4.09375 L6.28819444,4.55555556 C6.28819444,5.02154581 5.9104347,5.39930556 5.44444444,5.39930556 C4.97845419,5.39930556 4.60069444,5.02154581 4.60069444,4.55555556 L4.60069444,4.09375 Z M6.28819444,2.40625 L11.7118056,2.40625 L11.7118056,1 C11.7118056,0.534009742 12.0895653,0.15625 12.5555556,0.15625 C13.0215458,0.15625 13.3993056,0.534009742 13.3993056,1 L13.3993056,2.40625 L14.75,2.40625 C16.4586309,2.40625 17.84375,3.79136906 17.84375,5.5 L17.84375,15.875 C17.84375,17.5836309 16.4586309,18.96875 14.75,18.96875 L3.25,18.96875 C1.54136906,18.96875 0.15625,17.5836309 0.15625,15.875 L0.15625,5.5 C0.15625,3.79136906 1.54136906,2.40625 3.25,2.40625 L4.60069444,2.40625 L4.60069444,1 C4.60069444,0.534009742 4.97845419,0.15625 5.44444444,0.15625 C5.9104347,0.15625 6.28819444,0.534009742 6.28819444,1 L6.28819444,2.40625 Z M1.84375,8.95486111 L1.84375,15.875 C1.84375,16.6516504 2.47334957,17.28125 3.25,17.28125 L14.75,17.28125 C15.5266504,17.28125 16.15625,16.6516504 16.15625,15.875 L16.15625,8.95486111 L1.84375,8.95486111 Z" />
+              </svg> </span>
+            <span class="meta-text">
+              October 14, 2022
+            </span>
+          </li>
+          
+        </ul>
+      </div>
+    </div>
+  </header>
+  
+  <figure class="featured-media">
+    <div class="featured-media-inner section-inner medium">
+      <img width="1200" height="769" src="/images/Bloom.png"
+        class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="Generating Vice Headlines using Bloom"
+        sizes="(max-width: 1200px) 100vw, 1200px">
+    </div>
+  </figure>
+  
+  <div class="post-inner thin ">
+    <div class="entry-content">
+      <p><a href="https://www.technologyreview.com/2022/07/12/1055817/inside-a-radical-new-project-to-democratize-ai/">Image Source</a></p>
+<h2 id="motivation">Motivation</h2>
+<p><a title="Unknown authorUnknown author, Public domain, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Vice_Logo.svg"><img width="256" alt="Vice Logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Vice_Logo.svg/256px-Vice_Logo.svg.png" style="float: right;margin: 0 0 0 15px;"></a></p>
+<blockquote>
+<p><em>“What It’s Like To Sell Burgers In North Korea”</em></p>
+</blockquote>
+<p>About three years ago, this title sent me down yet another rabbit hole of obscure videos on VICE News. And how could it not? North Korean life is already quite opaque, but who knew they sold burgers there?</p>
+<p>Aside from the oddball videos, such as <em>“A Male Witch Explains Why He’s not a Wizard”</em> and <em>“I’m the Victim of a Far Right Conspiracy Theory”</em>, the channel features lots of reporting on conflict regions and events happening on the fringes of society. I started to wonder…, could a machine pick up on this? Would a language model be able not to learn, but replicate this subtle weirdness inherent to VICE YouTube Titles? I wanted to know, and already knew how to find out: fine-tuning BLOOM!</p>
+<h4 id="bloom">BLOOM</h4>
+<p>A few months ago, BigScience made waves in the open-source community by releasing their new large language model <a href="https://huggingface.co/docs/transformers/model_doc/bloom">BLOOM</a> to the public. It contrasted itself from most previous models by not making the number of parameters or dimensions its main selling point; it was its’ availability. One of BigScience&rsquo;s main competitors, OpenAI, hesitated to make their new model GPT3 publicly available. Only after months of exclusive commercial licensing to Microsoft was the average person able to access it. OpenAI cited their commitment to the safe deployment of AI as grounds for this decision, but critics labelled this a <a href="https://www.technologyreview.com/2020/09/23/1008729/openai-is-giving-microsoft-exclusive-access-to-its-gpt-3-language-model/">monetisation issue</a>. In contrast, BLOOM was open-sourced from the get-go, ready to use by anyone with enough technical savvy to run a <a href="https://huggingface.co/">Hugging Face</a> model.</p>
+<h2 id="how-to-build-it">How To Build It</h2>
+<h3 id="data">Data</h3>
+<blockquote>
+<p><a href="https://towardsdatascience.com/from-model-centric-to-data-centric-artificial-intelligence-77e423f3f593"><em>Data is at the heart of every ML endeavour.</em></a></p>
+</blockquote>
+<p>To my knowledge, there exists no readily available dataset of VICE video titles. We have to create one ourselves. This will be fairly easy, with YouTube providing a proprietary API to query data.</p>
+<h4 id="gathering-data">Gathering Data</h4>
+<p>There are a few setup steps that we need to complete before using the API. Roughly speaking, they are:</p>
+<ol>
+<li>Create a <a href="https://developers.google.com/">Google Developer Account</a></li>
+<li>Create a new project</li>
+<li>Enable the <a href="https://developers.google.com/youtube/v3">YouTube Data API v3</a></li>
+<li><a href="https://developers.google.com/youtube/registering_an_application">Create a credential</a></li>
+<li>Add the credential to your workspace</li>
+</ol>
+<p>There is an <a href="https://blog.hubspot.com/website/how-to-get-youtube-api-key">excellent Hubspot article</a> to guide you through the setup.</p>
+<p>Once you have the YouTube API working, we can use it to query the titles of all videos of a channel. There is a Python <a href="https://github.com/marcderbauer/bloom/blob/82c2cd11fb93477b08e4beff80474e682e16f570/youtube/query_api.py">script</a> included for this in this project’s GitHub repo.</p>
+<p>All the script needs is a YouTube playlist ID. We can find the playlist ID of an entire channel by going to the channel&rsquo;s page, clicking <code>PLAY ALL</code> and copying everything after <code>list=</code> in the link.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span>https://www.youtube.com/watch?v=Q6wBh7UcHqo&amp;list=n8zNIfYAQNdrFRrr8oibKw              # VICE
+</span></span><span style="display:flex;"><span>https://www.youtube.com/watch?v=cDppHAzyFew&amp;list=PLw613M86o5o7q1cjb26MfCgdxJtshvRZ-    # VICE News
+</span></span></code></pre></div><p>To maximise the amount of training data, it makes sense to include both the VICE and VICE News channels. They are topically similar, and for our intents identical.</p>
+<p>The <code>query_api.py</code> makes saving video titles easy. We just need to feed the playlist IDs to the script like this:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span>python3 youtube/query_api.py UUn8zNIfYAQNdrFRrr8oibKw PLw613M86o5o7q1cjb26MfCgdxJtshvRZ-
+</span></span></code></pre></div><p>It automatically downloads all video titles of a given playlist ID and concatenates them into one document named after the channel. Given multiple playlist IDs, it also creates a combined.txt containing all titles. This is the file we will use.</p>
+<h4 id="cleaning-data">Cleaning data</h4>
+<p>All the data we just queried is of a single type: YouTube Titles. They are already quite regular, but we can do better. Since we want to train a machine learning model, should aim for the highest data quality possible. We still have some more cleaning to do!</p>
+<p>On first inspection, there are three main issues:</p>
+<ol>
+<li>
+<p>Videos being in foreign languages i.e. non-English</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>Dibattito: la settimana lavorativa da 4 giorni in Italia è possibile?
+</span></span></code></pre></div></li>
+<li>
+<p>Video series, creating multiple entries for essentially the same title</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>North Korean Labor Camps (Part 1 of 7)
+</span></span><span style="display:flex;"><span>North Korean Labor Camps (Part 2 of 7)
+</span></span><span style="display:flex;"><span>North Korean Labor Camps (Part 3 of 7)
+</span></span><span style="display:flex;"><span>...
+</span></span></code></pre></div></li>
+<li>
+<p>Tags attached to categorise the videos</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>ANTHONY PAPPALARDO PART <span style="color:#ae81ff">1</span> of <span style="color:#ae81ff">2</span> <span style="color:#f92672">|</span> EPICLY LATER<span style="color:#e6db74">&#39;D | VICE</span>
+</span></span><span style="display:flex;"><span>VICE Guide to Karachi <span style="color:#66d9ef">with</span> Suroosh Alvi : Riding <span style="color:#66d9ef">with</span> a Killer (Part <span style="color:#ae81ff">5</span><span style="color:#f92672">/</span><span style="color:#ae81ff">5</span>)
+</span></span></code></pre></div></li>
+</ol>
+<p>The first two issues are easy to fix programmatically. Using the <a href="https://pypi.org/project/langdetect/">langdetect</a> library, We can filter out foreign-language videos from the list as such</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> langdetect <span style="color:#f92672">import</span> detec
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">filter_language</span>(lines, language<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;en&#34;</span>):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> list(filter(<span style="color:#66d9ef">lambda</span> x: detect(x) <span style="color:#f92672">==</span> language, lines))
+</span></span></code></pre></div><p>To filter similar video titles, we use the <a href="https://en.wikipedia.org/wiki/Levenshtein_distance">Levenshtein distance</a>. It’s a simple similarity measure to capture the difference in characters between two inputs. Using our example from above we notice that only one character is different. The Levenshtein distance for this pair is therefore on</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>North Korean Labor Camps (Part 1 of 7)
+</span></span><span style="display:flex;"><span>North Korean Labor Camps (Part 2 of 7)
+</span></span></code></pre></div><p>In Python, we use of the <a href="https://pypi.org/project/python-Levenshtein/">Levenshtein library</a>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> Levenshtein <span style="color:#f92672">import</span> distance
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">filter_similar</span>(lines, max_distance<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span>):
+</span></span><span style="display:flex;"><span>    seen_lines <span style="color:#f92672">=</span> []
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> line <span style="color:#f92672">in</span> lines:
+</span></span><span style="display:flex;"><span>        seen <span style="color:#f92672">=</span> <span style="color:#66d9ef">False</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> seen_line <span style="color:#f92672">in</span> seen_lines:
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> distance(line, seen_line) <span style="color:#f92672">&lt;=</span> max_distance:
+</span></span><span style="display:flex;"><span>                seen <span style="color:#f92672">=</span> <span style="color:#66d9ef">True</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">break</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> seen:
+</span></span><span style="display:flex;"><span>            seen_lines<span style="color:#f92672">.</span>append(line)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> seen_lines
+</span></span></code></pre></div><p>The two filters remove 1138 of the 7801 original titles, leaving us with a training set of 6663 examples.</p>
+<h5 id="manual-corrections">Manual Corrections:</h5>
+<p>In the previous steps, we filtered out unwanted lines, but have yet to touch any of the contents within the lines.</p>
+<p>Many titles have tags to associate videos with ongoing series. The tags are hard to remove programmatically and vary on a channel-by-channel basis. Furthermore they often don’t follow strict patterns. Some are separated by a pipe “|”, some by a dash “-”, or even by being surrounded by brackets ”(…)”. To add onto the complexity, tags aren’t always suffixes. Some tags are prefixes. This means that you can’t just remove everything occurring after some marker, since it may erase the main content.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span># Suffix
+</span></span><span style="display:flex;"><span>Did This YouTuber Actually Crash A Plane for Views? | My Life Online
+</span></span><span style="display:flex;"><span>Documenting America&#39;s Underbelly - ALL GAS NO BRAKES
+</span></span><span style="display:flex;"><span>How to Eat Like a Northerner (MUNCHIES GUIDE To...Full Episode)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># Prefix
+</span></span><span style="display:flex;"><span>The Opioid Effect: Maine&#39;s Fishing Community Battles with Heroin
+</span></span><span style="display:flex;"><span>The Opioid Effect: An Ohio Family Rebuilds After Addiction
+</span></span></code></pre></div><p>These tags require judgement calls on a case-to-case basis. They need to be manually cleaned using RegEx. It’s important to note that the tags can be essential to the structure of the title. We, therefore, do not want to remove all of them! Ideally, we want to delete just enough to simplify training and prevent overfitting. We also need to emphasise removing suffixes, as they reduce the output space and may indirectly serve as premature <code>&lt;EOS&gt;</code> tokens.</p>
+<h3 id="bloom-1">BLOOM</h3>
+<h4 id="training">Training</h4>
+<p>Using BLOOM&rsquo;s 176 Billion parameter base model would be a dream come true. Unfortunately, training the model locally limits the resources available (and training the model using a cloud service is out of scope for this project!). We thus need to restrict ourselves to the 560 Million parameter version &ndash; more than enough for a fun project!</p>
+<p>The first step on the model side is tokenisation. BigScience provides a pre-trained <code>Tokenizer</code>, which should provide optimal results for BLOOM.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># Load pretrained tokeniser</span>
+</span></span><span style="display:flex;"><span>tokenizer <span style="color:#f92672">=</span> BloomTokenizerFast<span style="color:#f92672">.</span>from_pretrained(<span style="color:#e6db74">&#34;bigscience/bloom-560m&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Define tokenise function</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">tokenize_function</span>(examples):
+</span></span><span style="display:flex;"><span>    examples[<span style="color:#e6db74">&#34;text&#34;</span>] <span style="color:#f92672">=</span> [example <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; &lt;/s&gt;&#34;</span> <span style="color:#66d9ef">for</span> example <span style="color:#f92672">in</span> examples[<span style="color:#e6db74">&#34;text&#34;</span>]] <span style="color:#75715e"># Append EOS</span>
+</span></span><span style="display:flex;"><span>    tokenized <span style="color:#f92672">=</span> tokenizer(examples[<span style="color:#e6db74">&#34;text&#34;</span>], padding<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>, pad_to_multiple_of<span style="color:#f92672">=</span><span style="color:#ae81ff">8</span>)
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">return</span> tokenized
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># map function onto dataset in batches</span>
+</span></span><span style="display:flex;"><span>tokenized <span style="color:#f92672">=</span> dataset<span style="color:#f92672">.</span>map(tokenize_function, batched<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>, num_proc<span style="color:#f92672">=</span><span style="color:#ae81ff">4</span>, remove_columns<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#34;text&#34;</span>])
+</span></span></code></pre></div><p>In the <code>tokenize_function</code> we append a <code>&lt;EOS&gt;</code> tag, so the model will learn when to stop generating. All the tokenised examples are also padded to a multiple of 8, in this case to a length of 32. This allows for batching; training the model significantly faster with only a slight trade-off in results.</p>
+<p>As all our padded examples are of length 32, we set a block size of 128, setting 4 parallel workers to process our examples at the same time.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">group_texts</span>(examples):
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Concatenate all texts.</span>
+</span></span><span style="display:flex;"><span>    concatenated_examples <span style="color:#f92672">=</span> {k: sum(examples[k], []) <span style="color:#66d9ef">for</span> k <span style="color:#f92672">in</span> examples<span style="color:#f92672">.</span>keys()}
+</span></span><span style="display:flex;"><span>    total_length <span style="color:#f92672">=</span> len(concatenated_examples[list(examples<span style="color:#f92672">.</span>keys())[<span style="color:#ae81ff">0</span>]])
+</span></span><span style="display:flex;"><span>    total_length <span style="color:#f92672">=</span> (total_length <span style="color:#f92672">//</span> block_size) <span style="color:#f92672">*</span> block_size
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Split by chunks of max_len.</span>
+</span></span><span style="display:flex;"><span>    result <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>        k: [t[i : i <span style="color:#f92672">+</span> block_size] <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">0</span>, total_length, block_size)]
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> k, t <span style="color:#f92672">in</span> concatenated_examples<span style="color:#f92672">.</span>items()
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    result[<span style="color:#e6db74">&#34;labels&#34;</span>] <span style="color:#f92672">=</span> result[<span style="color:#e6db74">&#34;input_ids&#34;</span>]<span style="color:#f92672">.</span>copy()
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> result
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>lm_datasets <span style="color:#f92672">=</span> tokenized<span style="color:#f92672">.</span>map(group_texts, batched<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>, batch_size<span style="color:#f92672">=</span><span style="color:#ae81ff">1000</span>, num_proc<span style="color:#f92672">=</span><span style="color:#ae81ff">4</span>,
+</span></span><span style="display:flex;"><span>)
+</span></span></code></pre></div><p>Now that the data is fully tokenised and batched, we can start the fine-tuning.</p>
+<p>Fine-tuning is a technique of <em>transfer learning</em>, adjusting a model trained on one task to function on another. As the name suggests, it <em>transfers</em> the knowledge of a Large Language Model, such as BLOOM, onto a highly specialised task, such as generating YouTube Titles.</p>
+<p>Hugging Face provides a <code>Trainer</code> class, which only needs the model, the dataset and the desired hyperparameters for fine-tuning. This makes the process fairly straightforward.</p>
+<p>Our task is to fine-tune the model, not to train it from scratch. We thus opt for a small <code>learning_rate</code> of 0.00002. To prevent overfitting we add regularisation with <code>weight_decay=0.01</code>. The 10 epochs are somewhat arbitrary, as we logged the training in Weights and Biases and can just choose the best epoch according to the train and evaluation loss.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># Import the model</span>
+</span></span><span style="display:flex;"><span>model <span style="color:#f92672">=</span> BloomForCausalLM<span style="color:#f92672">.</span>from_pretrained(bloom<span style="color:#f92672">-</span><span style="color:#ae81ff">560</span>m)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Define Hyperparameters</span>
+</span></span><span style="display:flex;"><span>training_args <span style="color:#f92672">=</span> TrainingArguments(
+</span></span><span style="display:flex;"><span>    evaluation_strategy <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;epoch&#34;</span>,
+</span></span><span style="display:flex;"><span>    learning_rate<span style="color:#f92672">=</span><span style="color:#ae81ff">2e-5</span>,
+</span></span><span style="display:flex;"><span>    weight_decay<span style="color:#f92672">=</span><span style="color:#ae81ff">0.01</span>,
+</span></span><span style="display:flex;"><span>    num_train_epochs<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Instantiate trainer</span>
+</span></span><span style="display:flex;"><span>trainer <span style="color:#f92672">=</span> Trainer(
+</span></span><span style="display:flex;"><span>    model<span style="color:#f92672">=</span>model,
+</span></span><span style="display:flex;"><span>    args<span style="color:#f92672">=</span>training_args,
+</span></span><span style="display:flex;"><span>    train_dataset<span style="color:#f92672">=</span>lm_datasets[<span style="color:#e6db74">&#34;train&#34;</span>],
+</span></span><span style="display:flex;"><span>    eval_dataset<span style="color:#f92672">=</span>lm_datasets[<span style="color:#e6db74">&#34;test&#34;</span>]
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Start the training</span>
+</span></span><span style="display:flex;"><span>trainer<span style="color:#f92672">.</span>train()
+</span></span></code></pre></div><h4 id="inference">Inference</h4>
+<p>The final (and most fun) part is inference. There are <a href="https://huggingface.co/blog/how-to-generate">many different inference strategies</a> we could use! The current state-of-the-art is sampling-based, so we will choose this one. It is also non-deterministic, which makes it a great choice if you don’t want your model to repeatedly generate the same sentence.</p>
+<p>We can pass different parameters to the <code>model.generate</code> function to finely adjust inference. There are too many parameters to elaborate upon, so I will leave you with this amazing <a href="https://huggingface.co/blog/how-to-generate">Hugging Face article</a> and the <a href="https://huggingface.co/transformers/v2.9.1/main_classes/model.html#transformers.PreTrainedModel.generate">official documentation</a>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>max_length<span style="color:#f92672">=</span><span style="color:#ae81ff">30</span>, 
+</span></span><span style="display:flex;"><span>min_length<span style="color:#f92672">=</span>len(input)<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>,
+</span></span><span style="display:flex;"><span>top_p<span style="color:#f92672">=</span><span style="color:#ae81ff">0.92</span>, 
+</span></span><span style="display:flex;"><span>top_k<span style="color:#f92672">=</span><span style="color:#ae81ff">50</span>,
+</span></span><span style="display:flex;"><span>temperature<span style="color:#f92672">=</span><span style="color:#ae81ff">0.7</span>,
+</span></span><span style="display:flex;"><span>repetition_penalty<span style="color:#f92672">=</span><span style="color:#ae81ff">1.2</span>
+</span></span></code></pre></div><h5 id="titlecase">Titlecase</h5>
+<p>Our final result should be a title. This means, it should follow a specific capitalisation pattern: all words start in uppercase, save for a select few function words. The <code>titlecase</code> library capitalises strings according to this pattern, so all we need to do is pass the results from the <code>model.generate</code> function to <code>titlecase</code>.</p>
+<p>Here’s some examples our model generated:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>Inside the Secret Helpline for People Living with Mental Health
+</span></span><span style="display:flex;"><span>North Korean Conspiracy Theorist Takes Me on a Virtual Tour of London
+</span></span><span style="display:flex;"><span>Why Do So Many People Think Donald Trump Is the Answer to Social Security?
+</span></span></code></pre></div><h3 id="summary">Summary</h3>
+<p>Fine-tuning BLOOM is a fun exercise in applied machine learning. I am a big fan of building entire projects from start to finish; ending up with a fully functioning model is therefore extremely satisfying. Aside from being a good exercise in data sourcing/cleaning and engineering, it teaches many best practices in machine learning.</p>
+<p>A firm believer in open-source software, I wanted to make this model as easily accessible as possible. The code for this project is available on my GitHub repository, with full documentation. You can download the model from the Huggingface Hub and try it out online with a Gradio demo hosted on Huggingface Spaces.</p>
+<p>If you have any thoughts, suggestions or improvements, I would be happy to hear from you!</p>
+<td nowrap><>  
+<p><a href="https://github.com/marcderbauer"><img src="https://img.shields.io/badge/-Github-000?style=flat&amp;logo=Github&amp;logoColor=white" alt="GitHub"></a>
+<a href="https://huggingface.co/marcderbauer/vice-headlines"><img src="https://img.shields.io/badge/-Model-yellow?style=flat" alt="Model"></a>
+<a href="https://huggingface.co/spaces/marcderbauer/vice-headlines"><img src="https://img.shields.io/badge/-Demo-green?style=flat" alt="Demo"></a>
+<a href="mailto:hello@marcanthonybauer.com?subject=%5BBLOOM%5D%20"><img src="https://img.shields.io/badge/-Email-c14438?style=flat&amp;logo=Gmail&amp;logoColor=white" alt="Gmail"></a></p>
+</td>
+
+    </div>
+  </div>
+
+  <div class="section-inner ">
+    <div class="post-meta-wrapper post-meta-single post-meta-single-bottom">
+      <ul class="post-meta">
+        <li class="post-tags meta-wrapper">
+          <span class="meta-icon">
+            <span class="screen-reader-text">Tags</span>
+            <svg class="svg-icon" aria-hidden="true" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg"
+              width="18" height="18" viewBox="0 0 18 18">
+              <path fill=""
+                d="M15.4496399,8.42490555 L8.66109799,1.63636364 L1.63636364,1.63636364 L1.63636364,8.66081885 L8.42522727,15.44178 C8.57869221,15.5954158 8.78693789,15.6817418 9.00409091,15.6817418 C9.22124393,15.6817418 9.42948961,15.5954158 9.58327627,15.4414581 L15.4486339,9.57610048 C15.7651495,9.25692435 15.7649133,8.74206554 15.4496399,8.42490555 Z M16.6084423,10.7304545 L10.7406818,16.59822 C10.280287,17.0591273 9.65554997,17.3181054 9.00409091,17.3181054 C8.35263185,17.3181054 7.72789481,17.0591273 7.26815877,16.5988788 L0.239976954,9.57887876 C0.0863319284,9.4254126 0,9.21716044 0,9 L0,0.818181818 C0,0.366312477 0.366312477,0 0.818181818,0 L9,0 C9.21699531,0 9.42510306,0.0862010512 9.57854191,0.239639906 L16.6084423,7.26954545 C17.5601275,8.22691012 17.5601275,9.77308988 16.6084423,10.7304545 Z M5,6 C4.44771525,6 4,5.55228475 4,5 C4,4.44771525 4.44771525,4 5,4 C5.55228475,4 6,4.44771525 6,5 C6,5.55228475 5.55228475,6 5,6 Z">
+              </path>
+            </svg> </span>
+          <span class="meta-text">
+            <a href="/tags/nlp" rel="tag">Nlp</a>
+            ,
+            <a href="/tags/hugging-face" rel="tag">Hugging face</a>
+             </span>
+        </li>
+      </ul>
+
+
+      
+    </div>
+  </div>
+</article>
+
+
+	</main>
+	
+	<div class="footer-nav-widgets-wrapper header-footer-group">
+  <div class="footer-inner section-inner">
+    <div class="footer-top has-social-menu">
+      <nav aria-label="Social links" class="footer-social-wrapper">
+        
+
+<ul class="social-menu reset-list-style social-icons fill-children-current-color">
+  
+
+  
+  <li id="menu-item-38" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-38"><a
+      href="https://github.com/marcderbauer" target="_blank"><span class="screen-reader-text">GitHub</span><svg class="svg-icon" aria-hidden="true"
+        role="img" focusable="false" width="24" height="24" viewbox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+        <path 
+          d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+        </path>
+      </svg></a></li>
+  
+
+  
+
+  
+
+  
+  <li id="menu-item-41" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-41"><a
+      href="mailto:hello@marcanthonybauer.com"><span class="screen-reader-text">Email</span><svg class="svg-icon" aria-hidden="true"
+        role="img" focusable="false" width="24" height="24" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M20,4H4C2.895,4,2,4.895,2,6v12c0,1.105,0.895,2,2,2h16c1.105,0,2-0.895,2-2V6C22,4.895,21.105,4,20,4z M20,8.236l-8,4.882 L4,8.236V6h16V8.236z">
+        </path>
+      </svg></a></li>
+  
+
+  
+  <li id="menu-item-42" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-42"><a
+      href="https://www.linkedin.com/in/marcanthonybauer" target="_blank"><span class="screen-reader-text">LinkedIn</span><svg class="svg-icon" aria-hidden="true"
+        role="img" focusable="false" width="24" height="24" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M19,19H16V13.7A1.5,1.5 0 0,0 14.5,12.2A1.5,1.5 0 0,0 13,13.7V19H10V10H13V11.2C13.5,10.36 14.59,9.8 15.5,9.8A3.5,3.5 0 0,1 19,13.3M6.5,8.31C5.5,8.31 4.69,7.5 4.69,6.5A1.81,1.81 0 0,1 6.5,4.69C7.5,4.69 8.31,5.5 8.31,6.5A1.81,1.81 0 0,1 6.5,8.31M8,19H5V10H8M20,2H4C2.89,2 2,2.89 2,4V20A2,2 0 0,0 4,22H20A2,2 0 0,0 22,20V4C22,2.89 21.1,2 20,2Z">
+        </path>
+      </svg></a></li>
+  
+
+  
+  <li id="menu-item-37" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-43"><a
+      href="https://raw.githubusercontent.com/marcderbauer/marcderbauer/main/CV_Marc_Anthony_Bauer.pdf" target="_blank"><span class="screen-reader-text">CV</span><svg class="svg-icon" aria-hidden="true"
+        role="img" focusable="false" width="20" height="20" viewbox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2zM9.5 3A1.5 1.5 0 0 0 11 4.5h2v9.255S12 12 8 12s-5 1.755-5 1.755V2a1 1 0 0 1 1-1h5.5v2z">   
+        </path>
+      </svg></a></li>
+  
+</ul>
+      </nav>
+    </div>
+    
+    <aside class="footer-widgets-outer-wrapper" role="complementary">
+      <div class="footer-widgets-wrapper">
+        <div class="footer-widgets column-one grid-item">
+          <div class="widget widget_text">
+            <div class="widget-content">
+              <h2 class="widget-title subheading heading-size-3">About This Site</h2>
+              <div class="textwidget">
+                <p>This website is a work in progress, but I expect everything to be done by the end fo the year. I&rsquo;m currently looking for new opportunities. If you are interested in what I do, then please feel free to <a href="mailto:hi@marcanthonybauer.com">reach out</a>.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </aside>
+    
+
+  </div>
+
+</div>
+
+
+<footer id="site-footer" role="contentinfo" class="header-footer-group">
+  <div class="section-inner">
+    <div class="footer-credits">
+      <p class="footer-copyright">Copyright © 2021 a hugo theme by <a href="https://themefisher.com/hugo-themes/">themefisher</a> ported from <a href="https://github.com/WordPress/twentytwenty">WordPress Twenty Twenty</a></p>
+    </div>
+    <a class="to-the-top" href="#site-header">
+      <span class="to-the-top-long">
+        To the top <span class="arrow" aria-hidden="true">&uarr;</span> </span>
+      <span class="to-the-top-short">
+        Up <span class="arrow" aria-hidden="true">&uarr;</span> </span>
+    </a>
+  </div>
+</footer>
+
+
+<!-- Search index -->
+<script>
+  var indexURL = "/index.json"
+</script>
+
+
+
+<script src="/js/jquery.min.min.js"></script>
+
+
+<script src="/js/script.min.js"></script>
+
+<!-- Main Script -->
+
+<script src="/js/search.min.js"></script>
+
+<script src="/plugins/search.js"></script>
+
+
+
+
+</body>
+
+</html>
