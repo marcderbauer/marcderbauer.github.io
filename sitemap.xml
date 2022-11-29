@@ -3,16 +3,34 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>/author/admin/</loc>
-    <lastmod>2022-10-14T00:00:00+00:00</lastmod>
+    <lastmod>2022-11-29T17:55:24+01:00</lastmod>
   </url><url>
     <loc>/author/</loc>
-    <lastmod>2022-10-14T00:00:00+00:00</lastmod>
+    <lastmod>2022-11-29T17:55:24+01:00</lastmod>
   </url><url>
     <loc>/blog/</loc>
-    <lastmod>2022-10-14T00:00:00+00:00</lastmod>
+    <lastmod>2022-11-29T17:55:24+01:00</lastmod>
   </url><url>
     <loc>/categories/</loc>
-    <lastmod>2022-10-14T00:00:00+00:00</lastmod>
+    <lastmod>2022-11-29T17:55:24+01:00</lastmod>
+  </url><url>
+    <loc>/</loc>
+    <lastmod>2022-11-29T17:55:24+01:00</lastmod>
+  </url><url>
+    <loc>/tags/music/</loc>
+    <lastmod>2022-11-29T17:55:24+01:00</lastmod>
+  </url><url>
+    <loc>/categories/nlp/</loc>
+    <lastmod>2022-11-29T17:55:24+01:00</lastmod>
+  </url><url>
+    <loc>/categories/project/</loc>
+    <lastmod>2022-11-29T17:55:24+01:00</lastmod>
+  </url><url>
+    <loc>/blog/songcrawler/</loc>
+    <lastmod>2022-11-29T17:55:24+01:00</lastmod>
+  </url><url>
+    <loc>/tags/</loc>
+    <lastmod>2022-11-29T17:55:24+01:00</lastmod>
   </url><url>
     <loc>/blog/vice_bloom/</loc>
     <lastmod>2022-10-14T00:00:00+00:00</lastmod>
@@ -20,19 +38,7 @@
     <loc>/tags/hugging-face/</loc>
     <lastmod>2022-10-14T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/</loc>
-    <lastmod>2022-10-14T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>/tags/nlp/</loc>
-    <lastmod>2022-10-14T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/categories/nlp/</loc>
-    <lastmod>2022-10-14T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/categories/project/</loc>
-    <lastmod>2022-10-14T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/tags/</loc>
     <lastmod>2022-10-14T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/about/</loc>

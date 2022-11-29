@@ -6,15 +6,23 @@
     <description>Recent content in Project on Marc-Anthony Bauer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 14 Oct 2022 00:00:00 +0000</lastBuildDate><atom:link href="/categories/project/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 29 Nov 2022 17:55:24 +0100</lastBuildDate><atom:link href="/categories/project/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Songcrawler is Here!</title>
+      <link>/blog/songcrawler/</link>
+      <pubDate>Tue, 29 Nov 2022 17:55:24 +0100</pubDate>
+      
+      <guid>/blog/songcrawler/</guid>
+      <description>I&amp;rsquo;ve been working on this project for a while. A full announcement will follow soon, but if you&amp;rsquo;re interested you can already check it out here!</description>
+    </item>
+    
     <item>
       <title>Generating Vice Headlines using Bloom</title>
       <link>/blog/vice_bloom/</link>
       <pubDate>Fri, 14 Oct 2022 00:00:00 +0000</pubDate>
       
       <guid>/blog/vice_bloom/</guid>
-      <description>Image Source
-Motivation “What It’s Like To Sell Burgers In North Korea”</description>
+      <description>Motivation “What It’s Like To Sell Burgers In North Korea”</description>
     </item>
     
   </channel>
